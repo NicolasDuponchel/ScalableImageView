@@ -9,15 +9,28 @@
     tools:context=".DemoActivity"
     >
 
+    <ImageView
+        android:id="@+id/normal_image"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/example_image_height"
+        android:src="@drawable/buildings"
+        app:layout_constraintBottom_toTopOf="@+id/scaled_top_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        android:scaleType="centerCrop"
+        />
+
     <duponchel.nicolas.scalableimageview.ScalableImageView
         android:id="@+id/scaled_top_image"
         android:layout_width="0dp"
         android:layout_height="@dimen/example_image_height"
-        android:src="@drawable/ic_launcher_foreground"
+        android:src="@drawable/buildings"
         app:layout_constraintBottom_toTopOf="@+id/scaled_bottom_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/normal_image"
         app:matrixType="fitTop"
         />
 
@@ -25,7 +38,7 @@
         android:id="@+id/scaled_bottom_image"
         android:layout_width="0dp"
         android:layout_height="@dimen/example_image_height"
-        android:src="@drawable/ic_launcher_foreground"
+        android:src="@drawable/buildings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
