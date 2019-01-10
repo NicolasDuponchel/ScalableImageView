@@ -1,0 +1,1 @@
+include ':app', ':scalable-image-view'
