@@ -9,7 +9,7 @@
     tools:context=".DemoActivity"
     >
 
-    <duponchel.nicolas.scalableimageview.ScalableImageView
+    <duponchel.nicolas.ImageView
         android:id="@+id/scaled_top_image"
         android:layout_width="0dp"
         android:layout_height="@dimen/example_image_height"
@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:matrixType="fitTop"
+        app:scaleType="fitTop"
         />
 
     <ImageView
@@ -34,7 +34,7 @@
         tools:ignore="ContentDescription"
         />
 
-    <duponchel.nicolas.scalableimageview.ScalableImageView
+    <duponchel.nicolas.ImageView
         android:id="@+id/scaled_bottom_image"
         android:layout_width="0dp"
         android:layout_height="@dimen/example_image_height"
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/normal_image"
-        app:matrixType="fitBottom"
+        app:scaleType="fitBottom"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
