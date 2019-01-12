@@ -9,29 +9,29 @@
     tools:context=".DemoActivity"
     >
 
-    <ImageView
-        android:id="@+id/normal_image"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/example_image_height"
-        android:src="@drawable/buildings"
-        app:layout_constraintBottom_toTopOf="@+id/scaled_top_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription"
-        android:scaleType="centerCrop"
-        />
-
     <duponchel.nicolas.scalableimageview.ScalableImageView
         android:id="@+id/scaled_top_image"
         android:layout_width="0dp"
         android:layout_height="@dimen/example_image_height"
         android:src="@drawable/buildings"
+        app:layout_constraintBottom_toTopOf="@+id/normal_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:matrixType="fitTop"
+        />
+
+    <ImageView
+        android:id="@+id/normal_image"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/example_image_height"
+        android:scaleType="centerCrop"
+        android:src="@drawable/buildings"
         app:layout_constraintBottom_toTopOf="@+id/scaled_bottom_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/normal_image"
-        app:matrixType="fitTop"
+        app:layout_constraintTop_toBottomOf="@+id/scaled_top_image"
+        tools:ignore="ContentDescription"
         />
 
     <duponchel.nicolas.scalableimageview.ScalableImageView
@@ -42,7 +42,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scaled_top_image"
+        app:layout_constraintTop_toBottomOf="@+id/normal_image"
         app:matrixType="fitBottom"
         />
 

@@ -9,7 +9,7 @@ import duponchel.nicolas.scalableimageview.ScalableImageView.MatrixCropType.*
 
 /**
  * A {@link ImageView} which allows custom scale types app:matrixType="fitTop/fitBottom".
- * Use it if you need a scaleType="cropCenter|fitTop" or scaleType="cropCenter|fitBottom"
+ * Use it if you need a scaleType="centerCrop|fitTop" or scaleType="centerCrop|fitBottom"
  */
 class ScalableImageView @JvmOverloads constructor(
     context: Context,
