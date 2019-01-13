@@ -9,6 +9,15 @@
     tools:context=".DemoActivity"
     >
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="scaleType='fitTop'"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintBottom_toTopOf="@+id/scaled_top_image"
+        />
+
     <duponchel.nicolas.ImageView
         android:id="@+id/scaled_top_image"
         android:layout_width="0dp"
@@ -21,17 +30,35 @@
         app:scaleType="fitTop"
         />
 
-    <ImageView
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="scaleType='centerCrop'"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintBottom_toTopOf="@+id/normal_image"
+        />
+
+    <duponchel.nicolas.ImageView
         android:id="@+id/normal_image"
         android:layout_width="0dp"
         android:layout_height="@dimen/example_image_height"
-        android:scaleType="centerCrop"
         android:src="@drawable/buildings"
         app:layout_constraintBottom_toTopOf="@+id/scaled_bottom_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scaled_top_image"
+        app:scaleType="centerCrop"
         tools:ignore="ContentDescription"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="scaleType='fitBottom'"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintBottom_toTopOf="@+id/scaled_bottom_image"
         />
 
     <duponchel.nicolas.ImageView
